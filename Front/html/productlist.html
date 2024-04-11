@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product List</title>
+<link rel="stylesheet" href="Productlist.css">
+<script src="quick.js"></script>
+<script src="cart.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="mini">
+    <p class="products">Empty</p>
+    <p class="names"></p>
+    <p class="miniprice"></p>
+    <a href="checkout.html" class="buy-now-btn">Buy Now</a>
+  </div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="productlist.html">Products</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="admin.html">Admin</a></li>
+  </ul>
+  <div class="cart icon-basket cart-icon">
+    <span class="number">1</span>
+    <img src="images/cart.png" alt="Cart Icon">
+  </div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button onclick="searchProducts()">Search</button>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- Your product HTML structure goes here -->
+  <!-- Example product -->
+  <div class="product">
+    <img src="image/p2.jpeg" alt="">
+    <h2 class="header">Nike Phantom Luna 2 Elite LV8</h2>
+    <p class="description">$235.95</p>
+    <button class="btn" data-product-id="1">Add to cart</button>
+    <div class="quickview">Quickview</div>
+  </div>
+
+<div class="product">
+    <img src="image/pa2.jpg" alt="">
+    <h2 class="header">Adidas Predator Pro FG Solar Energy</h2>
+    <p class="description">$210.55</p>
+    <button class="btn" data-product-id="2">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="product">
+    <img src="image/pc3.jpg" alt="">
+    <h2 class="header">PUMA Future Ultimate FG</h2>
+    <p class="description">$165.00</p>
+    <button class="btn" data-product-id="3">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="product">
+    <img src="image/p3.jpg" alt="">
+    <h2 class="header">Nike Vapor 15 Elite Mercurial Dream Speed</h2>
+    <p class="description">$89.99</p>
+    <button class="btn" data-product-id="4">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="product">
+    <img src="image/pa5.jpg" alt="">
+    <h2 class="header">PREDATOR ACCURACY.1 L FG 44</h2>
+    <p class="description">$162.50</p>
+    <button class="btn" data-product-id="5">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="product">
+    <img src="image/pc1.jpg" alt="">
+    <h2 class="header">PUMA Future Ultimate FG/</h2>
+    <p class="description">$146.95</p>
+    <button class="btn" data-product-id="6">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="product">
+    <img src="image/pa1.jpg" alt="">
+    <h2 class="header">adidas X Crazyfast .1 Laceless SG Crazyrush</h2>
+    <p class="description">$193.35</p>
+    <button class="btn" data-product-id="7">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="product">
+    <img src="image/p1.jpg" alt="">
+    <h2 class="header">SaZoom Superfly 9 Elite MR FG</h2>
+    <p class="description">$390.00</p>
+    <button class="btn" data-product-id="8">Add to cart</button>
+    <div class="quickview">Quickview</div>
+</div>
+
+<div class="quickviewContainer">
+  <div class="close"></div>
+  <h2 class="headline"></h2>
+  <p class="description"></p>
+  <img src="https://placeimg.com/100/100" alt="">
+  <img src="https://placeimg.com/100/100" alt="">
+  <img src="https://placeimg.com/100/100" alt="">
+</div>
+<script>
+  function searchProducts() {
+    var input = document.getElementById('searchInput').value.toUpperCase();
+    var products = document.querySelectorAll('.product');
+    for (var i = 0; i < products.length; i++) {
+      var header = products[i].querySelector('.header');
+      var txtValue = header.textContent || header.innerText;
+      if (txtValue.toUpperCase().indexOf(input) > -1) {
+        products[i].style.display = '';
+      } else {
+        products[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

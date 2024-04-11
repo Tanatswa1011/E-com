@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+<link rel="stylesheet" href="checkout.css">
+<script src="https://www.paypal.com/sdk/js?client-id=AVkeEo-TYTvoFeMvnbH7R569tMmNsyXN6_lIL5zjpGUO1TgkuY0M7-49TqQACZzCh2vcBAf6NnFkp3PT"></script>
+</head>
+<body>
+
+<div class='container'>
+  <div class='window'>
+    <div class='order-info'>
+      <div class='order-info-content'>
+        <div class='line'></div>
+        <div class="order-summary">
+          <h2>Order Summary</h2>
+          <div class='line'></div>
+          <ul id="order-list"></ul>
+          <p>Total: $<span id="order-total"></span></p>
+        </div> <!-- Order summary details  -->
+      </div>
+    </div>
+       
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="checkout.js" defer></script>
+<script src="paypal.js"></script>
+</body>
+</html>
+
+
+
+
